@@ -13,6 +13,9 @@ end
 
 target 'Swift Example' do
   pod 'SKYKitChat', :path => '../'
+  pod 'SKYKit/Core',
+    :git => 'https://github.com/SkygearIO/skygear-SDK-iOS.git',
+    :commit => '3548482c0d79ae7e991c4fc0b9139de31e7a6917'
   pod 'SKYKitChat/UI', :path => '../'
   pod 'Kingfisher', '~> 3.0'
 end
