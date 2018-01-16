@@ -282,6 +282,17 @@ open class SKYChatConversationViewController: JSQMessagesViewController, AVAudio
                 // nothing
             }
             }
+
+            // Remove touch target added by JSQMessageInputToolbar.
+            //
+            // The JSQMessageInputToolbar automatically adds touch target to button that is set to the
+            // rightBarButtonItem property via Key-Value-Observing. The JSQMessageInputToolbar
+            // assumes that the right bar button always trigger `didPressSend:`, but in reality
+            // we add a record button, so `didPressSend:` should not be called for record state.
+            // The touch target for the right bar button item is added when the button is created
+            // in viewWillAppear.
+            self.inputToolbar?.contentView?.rightBarButtonItem.removeTarget(self.inputToolbar, action: nil, for: UIControlEvents.touchUpInside)
+
         }
     }
 
