@@ -13,7 +13,7 @@ end
 target 'SKYKitChat_Tests' do
   pod 'SKYKitChat', :path => '../'
 
-  pod 'Specta'
+  pod 'Specta', :inhibit_warnings => true
   pod 'Expecta'
   pod 'OHHTTPStubs'
 end
