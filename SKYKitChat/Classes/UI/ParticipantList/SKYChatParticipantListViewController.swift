@@ -211,7 +211,7 @@ extension SKYChatParticipantListViewController: UISearchBarDelegate {
 
     public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
-            if text.characters.count > 0 {
+            if text.count > 0 {
                 self.searchTerm = text
             } else {
                 self.searchTerm = nil

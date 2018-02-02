@@ -17,8 +17,6 @@
 //  limitations under the License.
 //
 
-import SKYKitChat
-
 public extension SKYConversation {
     /**
      Generate a name list from a list of participant. The title will be concatenating all

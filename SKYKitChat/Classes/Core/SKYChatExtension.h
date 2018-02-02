@@ -222,8 +222,6 @@ typedef void (^SKYMessageOperationListCompletion)(
  Fetches conversations with optional last message in conversation.
 
  @param fetchLastMessage whether to fetch the last message
- @param page     page index of conversations to be fetched
- @param pageSize maximum number of conversations to be fetched
  @param completion completion block
  */
 - (void)fetchConversationsWithFetchLastMessage:(BOOL)fetchLastMessage
@@ -773,7 +771,7 @@ typedef void (^SKYMessageOperationListCompletion)(
  This method removes an observer from NSNotificationCenter for message events. The observer can be
  obtained when subscribing conversation events.
 
- @param NSNotification observer
+ @param observer the notification observer
  */
 - (void)unsubscribeToConversationWithObserver:(id)observer;
 
@@ -783,7 +781,7 @@ typedef void (^SKYMessageOperationListCompletion)(
  This method removes an observer from NSNotificationCenter for message events. The observer can be
  obtained when subscribing message events.
 
- @param NSNotification observer
+ @param observer the notification observer
  */
 - (void)unsubscribeToMessagesWithObserver:(id)observer;
 
@@ -793,7 +791,7 @@ typedef void (^SKYMessageOperationListCompletion)(
  This method removes an observer from NSNotificationCenter for typing indicator events. The
  observer can be obtained when subscribing typing indicator events.
 
- @param NSNotification observer
+ @param observer the notification observer
  */
 - (void)unsubscribeToTypingIndicatorWithObserver:(id)observer;
 

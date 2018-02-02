@@ -22,8 +22,8 @@ import UIKit
 public extension String {
     var initials: [String] {
         let components = self.components(separatedBy: " ")
-            .filter { $0.characters.count > 0 }
-            .map { String($0.characters.prefix(1)) }
+            .filter { $0.count > 0 }
+            .map { String($0.prefix(1)) }
 
         return components
     }
